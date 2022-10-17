@@ -1,5 +1,5 @@
 function game() {
-  //window.alert("Welcome to the Rock, Paper, Scissors Game!!");
+  window.alert("Welcome to the Rock, Paper, Scissors Game!!");
   const playerOptions = window.prompt(
     "Player 1, type in: rock, paper, or scissors"
   );
@@ -40,6 +40,9 @@ function game() {
 
   if (player === "rock" && computer === "paper") {
     alert("Computer Won, Paper covers rock.");
+  }
+  else{
+    alert("You did not enter rock, paper, or scissors");
   }
 }
 
