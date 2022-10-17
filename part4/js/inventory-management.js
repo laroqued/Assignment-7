@@ -4,7 +4,7 @@ var skuNumber;
 var products;
 var quantity;
 var cost;
-
+var entry;
 
 // MENU
 function display_menu() {
@@ -31,9 +31,14 @@ inventory_list.forEach(function (item) {
 // ADD
 function add(inventory_list) {
   "use strict";
-  var inventory = window.prompt("Enter the inventory's name");
-  inventory_list.push(inventory);
-  window.console.log(inventory + " was added.");
+  skuNumber = parseInt(window.prompt("Enter the SKU number."));
+  products = window.prompt("Enter the name of the product.");
+  quantity = parseInt(window.prompt("Enter the quantity."));
+  cost = parseFloat(window.prompt("Enter the price."));
+entry = [`${skuNumber}`,`${products}`,`${quantity}`,`${cost}`];
+
+  inventory_list.push(entry);
+  window.console.log(entry + " was added.");
   window.console.log("");
 }
 
